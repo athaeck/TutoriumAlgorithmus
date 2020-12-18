@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "w4+ZGBcH40a1QWxMjL6evWNFrwSFyj95e+/Mw70UnJtWTI5qVqHuS0vjZSj+lQwerKTz/hCfmFJptxJgYzR+YQ==",
+  "dgSpecHash": "yyt1YDtA8/sHYoIVDkttYxmpzgX4QAr6Jh3pzf5D8Z49MDi4iKzD7ADfyoUCjWOGTG+dYAtEPPYdN9bcvha22w==",
   "success": true,
   "projectFilePath": "C:\\Users\\Nick\\OneDrive\\HFU\\Mathe Tutorium\\TutoriumAlgorithmus\\ProjektstudiumZuordnung\\ProjektstudiumZuordnung.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\Nick\\.nuget\\packages\\newtonsoft.json\\12.0.3\\newtonsoft.json.12.0.3.nupkg.sha512"
+  ],
   "logs": []
 }

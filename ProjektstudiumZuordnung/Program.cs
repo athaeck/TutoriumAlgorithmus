@@ -9,7 +9,7 @@ namespace ProjektstudiumZuordnung
         public static List<Student> studentList { get; set; }
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            // AStudent a = new Student()
         }
     }
 }
