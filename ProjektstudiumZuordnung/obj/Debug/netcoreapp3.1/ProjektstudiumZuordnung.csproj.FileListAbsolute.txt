@@ -26,3 +26,5 @@ C:\Users\Tobias\Documents\GitKraken\Repo\Studium\WS20.21\MatheTut\TutoriumAlgori
 C:\Users\Tobias\Documents\GitKraken\Repo\Studium\WS20.21\MatheTut\TutoriumAlgorithmus\ProjektstudiumZuordnung\obj\Debug\netcoreapp3.1\ProjektstudiumZuordnung.dll
 C:\Users\Tobias\Documents\GitKraken\Repo\Studium\WS20.21\MatheTut\TutoriumAlgorithmus\ProjektstudiumZuordnung\obj\Debug\netcoreapp3.1\ProjektstudiumZuordnung.pdb
 C:\Users\Tobias\Documents\GitKraken\Repo\Studium\WS20.21\MatheTut\TutoriumAlgorithmus\ProjektstudiumZuordnung\obj\Debug\netcoreapp3.1\ProjektstudiumZuordnung.genruntimeconfig.cache
+C:\Users\Nick\OneDrive\HFU\Mathe Tutorium\TutoriumAlgorithmus\ProjektstudiumZuordnung\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll
+C:\Users\Nick\OneDrive\HFU\Mathe Tutorium\TutoriumAlgorithmus\ProjektstudiumZuordnung\obj\Debug\netcoreapp3.1\ProjektstudiumZuordnung.csproj.CopyComplete
