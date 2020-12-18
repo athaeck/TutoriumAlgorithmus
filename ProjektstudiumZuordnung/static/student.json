@@ -1,0 +1,222 @@
+[
+    {
+        "favouriteList": [
+            {
+                "projectID": 0,
+                "job": "ORGANISATION"
+            },
+            {
+                "projectID": 1,
+                "job": "PRODUKTION"
+            },
+            {
+                "projectID": 0,
+                "job": "KONZEPTION"
+            }
+        ],
+        "degreeCourse": "OMB",
+        "iD": 0,
+        "matched": false,
+        "projectID": -1
+    },
+    {
+        "favouriteList": [
+            {
+                "projectID": 1,
+                "job": "ORGANISATION"
+            },
+            {
+                "projectID": 0,
+                "job": "ORGANISATION"
+            },
+            {
+                "projectID": 2,
+                "job": "KONZEPTION"
+            }
+        ],
+        "degreeCourse": "OMB",
+        "iD": 1,
+        "matched": false,
+        "projectID": -1
+    },
+    {
+        "favouriteList": [
+            {
+                "projectID": 0,
+                "job": "PRODUKTION"
+            },
+            {
+                "projectID": 2,
+                "job": "PROJEKTMANAGEMENT"
+            },
+            {
+                "projectID": 1,
+                "job": "ORGANISATION"
+            }
+        ],
+        "degreeCourse": "MIB",
+        "iD": 2,
+        "matched": false,
+        "projectID": -1
+    },
+    {
+        "favouriteList": [
+            {
+                "projectID": 2,
+                "job": "KONZEPTION"
+            },
+            {
+                "projectID": 0,
+                "job": "PROJEKTMANAGEMENT"
+            },
+            {
+                "projectID": 1,
+                "job": "PROJEKTMANAGEMENT"
+            }
+        ],
+        "degreeCourse": "MKB",
+        "iD": 3,
+        "matched": false,
+        "projectID": -1
+    },
+    {
+        "favouriteList": [
+            {
+                "projectID": 0,
+                "job": "KONZEPTION"
+            },
+            {
+                "projectID": 2,
+                "job": "PROJEKTMANAGEMENT"
+            },
+            {
+                "projectID": 2,
+                "job": "PRODUKTION"
+            }
+        ],
+        "degreeCourse": "MIB",
+        "iD": 5,
+        "matched": false,
+        "projectID": -1
+    },
+    {
+        "favouriteList": [
+            {
+                "projectID": 2,
+                "job": "PRODUKTION"
+            },
+            {
+                "projectID": 0,
+                "job": "PROJEKTMANAGEMENT"
+            },
+            {
+                "projectID": 0,
+                "job": "KONZEPTION"
+            }
+        ],
+        "degreeCourse": "OMB",
+        "iD": 6,
+        "matched": false,
+        "projectID": -1
+    },
+    {
+        "favouriteList": [
+            {
+                "projectID": 2,
+                "job": "ORGANISATION"
+            },
+            {
+                "projectID": 0,
+                "job": "ORGANISATION"
+            },
+            {
+                "projectID": 1,
+                "job": "ORGANISATION"
+            }
+        ],
+        "degreeCourse": "MIB",
+        "iD": 7,
+        "matched": false,
+        "projectID": -1
+    },
+    {
+        "favouriteList": [
+            {
+                "projectID": 0,
+                "job": "PROJEKTMANAGEMENT"
+            },
+            {
+                "projectID": 1,
+                "job": "ORGANISATION"
+            },
+            {
+                "projectID": 2,
+                "job": "ORGANISATION"
+            }
+        ],
+        "degreeCourse": "MIB",
+        "iD": 8,
+        "matched": false,
+        "projectID": -1
+    },
+    {
+        "favouriteList": [
+            {
+                "projectID": 1,
+                "job": "KONZEPTION"
+            },
+            {
+                "projectID": 2,
+                "job": "PROJEKTMANAGEMENT"
+            },
+            {
+                "projectID": 0,
+                "job": "PROJEKTMANAGEMENT"
+            }
+        ],
+        "degreeCourse": "OMB",
+        "iD": 9,
+        "matched": false,
+        "projectID": -1
+    },
+    {
+        "favouriteList": [
+            {
+                "projectID": 1,
+                "job": "ORGANISATION"
+            },
+            {
+                "projectID": 0,
+                "job": "ORGANISATION"
+            },
+            {
+                "projectID": 2,
+                "job": "PROJEKTMANAGEMENT"
+            }
+        ],
+        "degreeCourse": "MKB",
+        "iD": 10,
+        "matched": false,
+        "projectID": -1
+    },
+    {
+        "favouriteList": [
+            {
+                "projectID": 0,
+                "job": "KONZEPTION"
+            },
+            {
+                "projectID": 1,
+                "job": "ORGANISATION"
+            },
+            {
+                "projectID": 1,
+                "job": "KONZEPTION"
+            }
+        ],
+        "degreeCourse": "MKB",
+        "iD": 11,
+        "matched": false,
+        "projectID": -1
+    }
+]
