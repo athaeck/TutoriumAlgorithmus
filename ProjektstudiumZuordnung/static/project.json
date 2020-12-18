@@ -1,0 +1,76 @@
+[
+    {
+        "capacity": 4,
+        "jobs": [
+            "PROJEKTMANAGEMENT",
+            "ORGANISATION",
+            "PRODUKTION",
+            "KONZEPTION"
+        ],
+        "students": [],
+        "projectID": 0,
+        "distribution": [
+            {
+                "degreeCourse": "MIB",
+                "count": 1
+            },
+            {
+                "degreeCourse": "OMB",
+                "count": 1
+            },
+            {
+                "degreeCourse": "MKB",
+                "count": 1
+            }
+        ]
+    },
+    {
+        "capacity": 3,
+        "jobs": [
+            "ORGANISATION",
+            "PRODUKTION",
+            "KONZEPTION"
+        ],
+        "students": [],
+        "projectID": 1,
+        "distribution": [
+            {
+                "degreeCourse": "MIB",
+                "count": 1
+            },
+            {
+                "degreeCourse": "OMB",
+                "count": 1
+            },
+            {
+                "degreeCourse": "MKB",
+                "count": 1
+            }
+        ]
+    },
+    {
+        "capacity": 4,
+        "jobs": [
+            "PROJEKTMANAGEMENT",
+            "ORGANISATION",
+            "PRODUKTION",
+            "KONZEPTION"
+        ],
+        "students": [],
+        "projectID": 0,
+        "distribution": [
+            {
+                "degreeCourse": "MIB",
+                "count": 1
+            },
+            {
+                "degreeCourse": "OMB",
+                "count": 1
+            },
+            {
+                "degreeCourse": "MKB",
+                "count": 1
+            }
+        ]
+    }
+]

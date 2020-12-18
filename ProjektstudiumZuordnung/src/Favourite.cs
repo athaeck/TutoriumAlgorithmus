@@ -4,8 +4,8 @@ namespace ProjektstudiumZuordnung
 {
     class Favourite
     {
-        public int projectID { get; set; }
-        public Job job { get; set; }
+        public int projectID { get; private set; }
+        public Job job { get; private set; }
 
         public Favourite(int _projectID, Job _job)
         {

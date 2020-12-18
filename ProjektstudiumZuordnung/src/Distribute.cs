@@ -4,8 +4,8 @@ namespace ProjektstudiumZuordnung
 {
     class Distribute
     {
-        public DegreeCourse degreeCourse { get; set; }
-        public int count { get; set; }
+        public DegreeCourse degreeCourse { get; private set; }
+        public int count { get; private set; }
         public Distribute(DegreeCourse _degreeCourse, int _count)
         {
             degreeCourse = _degreeCourse;
