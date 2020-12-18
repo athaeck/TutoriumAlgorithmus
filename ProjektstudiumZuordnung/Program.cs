@@ -10,6 +10,11 @@ namespace ProjektstudiumZuordnung
         static void Main(string[] args)
         {
             // AStudent a = new Student()
+            GetData();
+        }
+        static void GetData()
+        {
+
         }
     }
 }
