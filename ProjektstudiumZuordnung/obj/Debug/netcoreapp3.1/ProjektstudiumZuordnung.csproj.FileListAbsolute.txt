@@ -11,3 +11,18 @@ C:\Users\Nick\OneDrive\HFU\Mathe Tutorium\TutoriumAlgorithmus\ProjektstudiumZuor
 C:\Users\Nick\OneDrive\HFU\Mathe Tutorium\TutoriumAlgorithmus\ProjektstudiumZuordnung\obj\Debug\netcoreapp3.1\ProjektstudiumZuordnung.dll
 C:\Users\Nick\OneDrive\HFU\Mathe Tutorium\TutoriumAlgorithmus\ProjektstudiumZuordnung\obj\Debug\netcoreapp3.1\ProjektstudiumZuordnung.pdb
 C:\Users\Nick\OneDrive\HFU\Mathe Tutorium\TutoriumAlgorithmus\ProjektstudiumZuordnung\obj\Debug\netcoreapp3.1\ProjektstudiumZuordnung.genruntimeconfig.cache
+C:\Users\Tobias\Documents\GitKraken\Repo\Studium\WS20.21\MatheTut\TutoriumAlgorithmus\ProjektstudiumZuordnung\bin\Debug\netcoreapp3.1\ProjektstudiumZuordnung.exe
+C:\Users\Tobias\Documents\GitKraken\Repo\Studium\WS20.21\MatheTut\TutoriumAlgorithmus\ProjektstudiumZuordnung\bin\Debug\netcoreapp3.1\ProjektstudiumZuordnung.deps.json
+C:\Users\Tobias\Documents\GitKraken\Repo\Studium\WS20.21\MatheTut\TutoriumAlgorithmus\ProjektstudiumZuordnung\bin\Debug\netcoreapp3.1\ProjektstudiumZuordnung.runtimeconfig.json
+C:\Users\Tobias\Documents\GitKraken\Repo\Studium\WS20.21\MatheTut\TutoriumAlgorithmus\ProjektstudiumZuordnung\bin\Debug\netcoreapp3.1\ProjektstudiumZuordnung.runtimeconfig.dev.json
+C:\Users\Tobias\Documents\GitKraken\Repo\Studium\WS20.21\MatheTut\TutoriumAlgorithmus\ProjektstudiumZuordnung\bin\Debug\netcoreapp3.1\ProjektstudiumZuordnung.dll
+C:\Users\Tobias\Documents\GitKraken\Repo\Studium\WS20.21\MatheTut\TutoriumAlgorithmus\ProjektstudiumZuordnung\bin\Debug\netcoreapp3.1\ProjektstudiumZuordnung.pdb
+C:\Users\Tobias\Documents\GitKraken\Repo\Studium\WS20.21\MatheTut\TutoriumAlgorithmus\ProjektstudiumZuordnung\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll
+C:\Users\Tobias\Documents\GitKraken\Repo\Studium\WS20.21\MatheTut\TutoriumAlgorithmus\ProjektstudiumZuordnung\obj\Debug\netcoreapp3.1\ProjektstudiumZuordnung.csprojAssemblyReference.cache
+C:\Users\Tobias\Documents\GitKraken\Repo\Studium\WS20.21\MatheTut\TutoriumAlgorithmus\ProjektstudiumZuordnung\obj\Debug\netcoreapp3.1\ProjektstudiumZuordnung.AssemblyInfoInputs.cache
+C:\Users\Tobias\Documents\GitKraken\Repo\Studium\WS20.21\MatheTut\TutoriumAlgorithmus\ProjektstudiumZuordnung\obj\Debug\netcoreapp3.1\ProjektstudiumZuordnung.AssemblyInfo.cs
+C:\Users\Tobias\Documents\GitKraken\Repo\Studium\WS20.21\MatheTut\TutoriumAlgorithmus\ProjektstudiumZuordnung\obj\Debug\netcoreapp3.1\ProjektstudiumZuordnung.csproj.CoreCompileInputs.cache
+C:\Users\Tobias\Documents\GitKraken\Repo\Studium\WS20.21\MatheTut\TutoriumAlgorithmus\ProjektstudiumZuordnung\obj\Debug\netcoreapp3.1\ProjektstudiumZuordnung.csproj.CopyComplete
+C:\Users\Tobias\Documents\GitKraken\Repo\Studium\WS20.21\MatheTut\TutoriumAlgorithmus\ProjektstudiumZuordnung\obj\Debug\netcoreapp3.1\ProjektstudiumZuordnung.dll
+C:\Users\Tobias\Documents\GitKraken\Repo\Studium\WS20.21\MatheTut\TutoriumAlgorithmus\ProjektstudiumZuordnung\obj\Debug\netcoreapp3.1\ProjektstudiumZuordnung.pdb
+C:\Users\Tobias\Documents\GitKraken\Repo\Studium\WS20.21\MatheTut\TutoriumAlgorithmus\ProjektstudiumZuordnung\obj\Debug\netcoreapp3.1\ProjektstudiumZuordnung.genruntimeconfig.cache

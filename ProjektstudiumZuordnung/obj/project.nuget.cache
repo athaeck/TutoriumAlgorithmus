@@ -1,10 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "yyt1YDtA8/sHYoIVDkttYxmpzgX4QAr6Jh3pzf5D8Z49MDi4iKzD7ADfyoUCjWOGTG+dYAtEPPYdN9bcvha22w==",
+  "dgSpecHash": "DZbz3tlxxJWFe+vUvUZSlSGllLN/fALi5VfmlL5k9Cx4mT3F5ndxcBMpub8Ps0CkopfLtCQQTBfSCRYcFgHIXg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Nick\\OneDrive\\HFU\\Mathe Tutorium\\TutoriumAlgorithmus\\ProjektstudiumZuordnung\\ProjektstudiumZuordnung.csproj",
+  "projectFilePath": "C:\\Users\\Tobias\\Documents\\GitKraken\\Repo\\Studium\\WS20.21\\MatheTut\\TutoriumAlgorithmus\\ProjektstudiumZuordnung\\ProjektstudiumZuordnung.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\Nick\\.nuget\\packages\\newtonsoft.json\\12.0.3\\newtonsoft.json.12.0.3.nupkg.sha512"
+    "C:\\Users\\Tobias\\.nuget\\packages\\newtonsoft.json\\12.0.3\\newtonsoft.json.12.0.3.nupkg.sha512"
   ],
   "logs": []
 }
