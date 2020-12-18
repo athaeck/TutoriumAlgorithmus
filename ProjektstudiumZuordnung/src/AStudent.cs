@@ -1,7 +1,7 @@
 abstract class AStudent
 {
-    private DegreeCourse degreeCourse;
-    private int iD;
+    public DegreeCourse degreeCourse;
+    public int iD;
     protected AStudent(DegreeCourse _degreeCourse, int _iD)
     {
         degreeCourse = _degreeCourse;
