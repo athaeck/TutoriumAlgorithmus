@@ -113,13 +113,14 @@ namespace ProjektstudiumZuordnung
             int unAssignetStudents = studentList.Count;
             while (unAssignetStudents > 0)
             {
-                int student = 0;
-                for (student = 0; student < studentList.Count; student++)
+                int _student = 0;
+                for (_student = 0; _student < studentList.Count; _student++)
                 {
-                    Console.WriteLine("Student: " + studentList[student].iD + " " + "is on turn");
+                    Console.WriteLine("Student: " + studentList[_student].iD + " " + "is on turn");
 
-                    Favourite favourite = studentList[student].favouriteList[0];
+                    Favourite favourite = studentList[_student].favouriteList[0];
                     Project project = projectList[favourite.projectID];
+                    Student student = studentList[_student];
 
                     if(project.IsSpaceLeftInProject() == true){
                         
@@ -129,7 +130,7 @@ namespace ProjektstudiumZuordnung
                         
                     }
 
-                    SwitchStudentInUnAssigntList(studentList[student]);
+                    SwitchStudentInUnAssigntList(studentList[_student]);
 
                     unAssignetStudents --;
                 }
