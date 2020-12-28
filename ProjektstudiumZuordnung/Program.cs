@@ -16,9 +16,6 @@ namespace ProjektstudiumZuordnung
         {
             Console.WriteLine("Begin Initiation");
             GetData();
-            Console.WriteLine(initiatorList);
-            Console.WriteLine(projectList);
-            Console.WriteLine(studentList);
             Console.WriteLine("Loaded Data");
         }
         static void GetData()

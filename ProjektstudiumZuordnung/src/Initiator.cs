@@ -4,8 +4,6 @@ namespace ProjektstudiumZuordnung
 {
     class Initiator : AStudent
     {
-        public DegreeCourse degreeCourse { get; private set; }
-        public int iD { get; private set; }
         public int groupeID { get; private set; }
         public Initiator(DegreeCourse _degreeCourse, int _iD, int _groupeID) : base(_degreeCourse, _iD)
         {
