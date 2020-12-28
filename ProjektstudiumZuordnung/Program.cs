@@ -142,10 +142,10 @@ namespace ProjektstudiumZuordnung
                     }
                     else
                     {
-                        if (StudentVsStudent(favourite, project))
-                        {
+                        // if (StudentVsStudent(favourite, project))
+                        // {
                             
-                        }
+                        // }
                     }
 
                     // SwitchStudentInUnAssigntList(studentList[_student]);
