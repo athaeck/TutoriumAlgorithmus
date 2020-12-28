@@ -13,5 +13,9 @@ namespace ProjektstudiumZuordnung
             matched = _matched;
             projectID = _projectID;
         }
+        public void RemoveFavourite(int i)
+        {
+            favouriteList.RemoveAt(i);
+        }
     }
 }

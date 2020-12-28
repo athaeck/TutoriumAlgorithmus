@@ -10,7 +10,7 @@ namespace ProjektstudiumZuordnung
         public static List<Initiator> initiatorList = new List<Initiator>();
         public static List<Project> projectList = new List<Project>();
         public static List<Student> studentList = new List<Student>();
-        public static List<AStudent> leftStudents = new List<AStudent>();
+        public static List<AStudent> leftStudentList = new List<AStudent>();
 
         private static string test_number = "";
         static void Main(string[] args)
@@ -81,9 +81,9 @@ namespace ProjektstudiumZuordnung
                     Console.WriteLine("TBD");
                     break;
                 default:
-                    projectList.Add(new Project(4, new List<Job>() { Job.PROJEKTMANAGEMENT, Job.ORGANISATION, Job.PRODUKTION, Job.KONZEPTION }, new List<AStudent>(), 0, new Distribute[3] { new Distribute(DegreeCourse.MIB, 1), new Distribute(DegreeCourse.OMB, 1), new Distribute(DegreeCourse.MKB, 1) }));
-                    projectList.Add(new Project(3, new List<Job>() { Job.ORGANISATION, Job.KONZEPTION, Job.PRODUKTION }, new List<AStudent>(), 1, new Distribute[3] { new Distribute(DegreeCourse.MIB, 1), new Distribute(DegreeCourse.OMB, 1), new Distribute(DegreeCourse.MKB, 1) }));
-                    projectList.Add(new Project(4, new List<Job>() { Job.PROJEKTMANAGEMENT, Job.ORGANISATION, Job.PRODUKTION, Job.KONZEPTION }, new List<AStudent>(), 2, new Distribute[3] { new Distribute(DegreeCourse.MIB, 1), new Distribute(DegreeCourse.OMB, 1), new Distribute(DegreeCourse.MKB, 1) }));
+                    projectList.Add(new Project(4, new List<Job>() { Job.PROJEKTMANAGEMENT, Job.ORGANISATION, Job.PRODUKTION, Job.KONZEPTION },     new List<AStudent>(), 0, new Distribute[3] { new Distribute(DegreeCourse.MIB, 1), new Distribute(DegreeCourse.OMB, 1), new Distribute(DegreeCourse.MKB, 1) }));
+                    projectList.Add(new Project(3, new List<Job>() { Job.ORGANISATION, Job.KONZEPTION, Job.PRODUKTION },                            new List<AStudent>(), 1, new Distribute[3] { new Distribute(DegreeCourse.MIB, 1), new Distribute(DegreeCourse.OMB, 1), new Distribute(DegreeCourse.MKB, 1) }));
+                    projectList.Add(new Project(4, new List<Job>() { Job.PROJEKTMANAGEMENT, Job.ORGANISATION, Job.PRODUKTION, Job.KONZEPTION },     new List<AStudent>(), 2, new Distribute[3] { new Distribute(DegreeCourse.MIB, 1), new Distribute(DegreeCourse.OMB, 1), new Distribute(DegreeCourse.MKB, 1) }));
                     break;
             }
         }
@@ -100,7 +100,7 @@ namespace ProjektstudiumZuordnung
                 int length = project.students.Count;
                 if (length > 2)
                 {
-                    Console.WriteLine("ERROR too much Initiators");
+                    Console.WriteLine("ERROR!!! to(o) many Initiators!");
                 }
                 else
                 {
@@ -113,31 +113,57 @@ namespace ProjektstudiumZuordnung
             int unAssignetStudents = studentList.Count;
             while (unAssignetStudents > 0)
             {
-                int _student = 0;
+                int _student;
                 for (_student = 0; _student < studentList.Count; _student++)
                 {
                     Console.WriteLine("Student: " + studentList[_student].iD + " " + "is on turn");
-
-                    Favourite favourite = studentList[_student].favouriteList[0];
+                    int activeFavourite = 0;
+                    Favourite favourite = studentList[_student].favouriteList[activeFavourite];
                     Project project = projectList[favourite.projectID];
                     Student student = studentList[_student];
 
                     if(project.IsSpaceLeftInProject() == true){
-                        
+                        if (project.IsJobValid(favourite.job))
+                        {
+                            if (project.IsSpaceAtJob(student))
+                            {
+                                project.SetStudentToStudentList(student);
+                                unAssignetStudents--;
+                            }
+                            else
+                            {
+                                student.RemoveFavourite(activeFavourite);
+                            }
+                        }
+                        else
+                        {
+                            
+                        }
                     }
                     else
                     {
-                        
+                        if (StudentVsStudent(favourite, project))
+                        {
+                            
+                        }
                     }
 
-                    SwitchStudentInUnAssigntList(studentList[_student]);
+                    // SwitchStudentInUnAssigntList(studentList[_student]);
 
-                    unAssignetStudents --;
+                    // unAssignetStudents --;
                 }
             }
         }
         static void SwitchStudentInUnAssigntList(AStudent student){
-            leftStudents.Add(student);
+            leftStudentList.Add(student);
+        }
+        static bool StudentVsStudent(Favourite currentStudentFavourite, Project relatedProject){
+            // List<AStudent> previouseStudents = relatedProject.students;
+
+            // muss besprochen werden
+
+
+            return false;
         }
     }
 }
