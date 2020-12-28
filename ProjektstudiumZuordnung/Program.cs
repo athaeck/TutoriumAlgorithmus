@@ -10,6 +10,7 @@ namespace ProjektstudiumZuordnung
         public static List<Initiator> initiatorList = new List<Initiator>();
         public static List<Project> projectList = new List<Project>();
         public static List<Student> studentList = new List<Student>();
+        public static List<AStudent> leftStudents = new List<AStudent>();
 
         private static string test_number = "";
         static void Main(string[] args)
@@ -17,6 +18,11 @@ namespace ProjektstudiumZuordnung
             Console.WriteLine("Begin Initiation");
             GetData();
             Console.WriteLine("Loaded Data");
+            AddingInitiatorsToProjects();
+            Console.WriteLine("Added Initiaros");
+            Console.WriteLine("Start Adding Student to Projects");
+            AddingStudentsToProjects();
+            Console.WriteLine("Added Students to Projects");
         }
         static void GetData()
         {
@@ -80,6 +86,57 @@ namespace ProjektstudiumZuordnung
                     projectList.Add(new Project(4, new List<Job>() { Job.PROJEKTMANAGEMENT, Job.ORGANISATION, Job.PRODUKTION, Job.KONZEPTION }, new List<AStudent>(), 2, new Distribute[3] { new Distribute(DegreeCourse.MIB, 1), new Distribute(DegreeCourse.OMB, 1), new Distribute(DegreeCourse.MKB, 1) }));
                     break;
             }
+        }
+        static void AddingInitiatorsToProjects()
+        {
+            foreach (Initiator init in initiatorList)
+            {
+                int groupeID = init.groupeID;
+                Project project = projectList[groupeID];
+                project.SetStudentToStudentList(init);
+            }
+            foreach (Project project in projectList)
+            {
+                int length = project.students.Count;
+                if (length > 2)
+                {
+                    Console.WriteLine("ERROR too much Initiators");
+                }
+                else
+                {
+                    Console.WriteLine("Assignment was successfull");
+                }
+            }
+        }
+        static void AddingStudentsToProjects()
+        {
+            int unAssignetStudents = studentList.Count;
+            while (unAssignetStudents > 0)
+            {
+                int student = 0;
+                for (student = 0; student < studentList.Count; student++)
+                {
+                    Console.WriteLine("Student: " + studentList[student].iD + " " + "is on turn");
+
+                    Favourite favourite = studentList[student].favouriteList[0];
+                    Project project = projectList[favourite.projectID];
+
+                    if(project.IsSpaceLeftInProject() == true){
+                        
+                    }
+                    else
+                    {
+                        
+                    }
+
+                    SwitchStudentInUnAssigntList(studentList[student]);
+
+                    unAssignetStudents --;
+                }
+            }
+        }
+        static void SwitchStudentInUnAssigntList(AStudent student){
+            leftStudents.Add(student);
         }
     }
 }
