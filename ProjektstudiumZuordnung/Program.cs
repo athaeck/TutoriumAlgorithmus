@@ -30,6 +30,10 @@ namespace ProjektstudiumZuordnung
             InitStudents();
             InitInitiators();
             InitProjects();
+            foreach (Student s in studentList)
+            {
+                s.SetOriginalFavourites();
+            }
         }
         static void InitStudents()
         {
@@ -82,9 +86,9 @@ namespace ProjektstudiumZuordnung
                     Console.WriteLine("TBD");
                     break;
                 default:
-                    projectList.Add(new Project(4, new List<Job>() { Job.PROJEKTMANAGEMENT, Job.ORGANISATION, Job.PRODUKTION, Job.KONZEPTION }, new List<AStudent>(), 0, new Distribute[3] { new Distribute(DegreeCourse.MIB, 1), new Distribute(DegreeCourse.OMB, 1), new Distribute(DegreeCourse.MKB, 1) }));
-                    projectList.Add(new Project(3, new List<Job>() { Job.ORGANISATION, Job.KONZEPTION, Job.PRODUKTION }, new List<AStudent>(), 1, new Distribute[3] { new Distribute(DegreeCourse.MIB, 1), new Distribute(DegreeCourse.OMB, 1), new Distribute(DegreeCourse.MKB, 1) }));
-                    projectList.Add(new Project(4, new List<Job>() { Job.PROJEKTMANAGEMENT, Job.ORGANISATION, Job.PRODUKTION, Job.KONZEPTION }, new List<AStudent>(), 2, new Distribute[3] { new Distribute(DegreeCourse.MIB, 1), new Distribute(DegreeCourse.OMB, 1), new Distribute(DegreeCourse.MKB, 1) }));
+                    projectList.Add(new Project(4, new List<Job>() { Job.PROJEKTMANAGEMENT, Job.ORGANISATION, Job.PRODUKTION, Job.KONZEPTION }, new List<Student>(), 0, new Distribute[3] { new Distribute(DegreeCourse.MIB, 1), new Distribute(DegreeCourse.OMB, 1), new Distribute(DegreeCourse.MKB, 1) }, new List<Initiator>()));
+                    projectList.Add(new Project(3, new List<Job>() { Job.ORGANISATION, Job.KONZEPTION, Job.PRODUKTION }, new List<Student>(), 1, new Distribute[3] { new Distribute(DegreeCourse.MIB, 1), new Distribute(DegreeCourse.OMB, 1), new Distribute(DegreeCourse.MKB, 1) }, new List<Initiator>()));
+                    projectList.Add(new Project(4, new List<Job>() { Job.PROJEKTMANAGEMENT, Job.ORGANISATION, Job.PRODUKTION, Job.KONZEPTION }, new List<Student>(), 2, new Distribute[3] { new Distribute(DegreeCourse.MIB, 1), new Distribute(DegreeCourse.OMB, 1), new Distribute(DegreeCourse.MKB, 1) }, new List<Initiator>()));
                     break;
             }
         }
@@ -94,7 +98,7 @@ namespace ProjektstudiumZuordnung
             {
                 int groupeID = init.groupeID;
                 Project project = projectList[groupeID];
-                project.SetStudentToStudentList(init);
+                project.SetInitatorToStudentList(init);
             }
             foreach (Project project in projectList)
             {
@@ -232,7 +236,7 @@ namespace ProjektstudiumZuordnung
 
             foreach (Favourite favourite in oldStudentFavourites)
             {
-                if (favourite.projectID == relatedProject.projectID)
+                if (oldStudentFavourites[i].projectID == relatedProject.projectID)
                 {
                     Console.WriteLine("Student OLD gewinnt! Kein switch!");
                     index = i;

@@ -6,21 +6,28 @@ namespace ProjektstudiumZuordnung
     {
         public int capacity { get; private set; }
         public List<Job> jobs { get; private set; }
-        public List<AStudent> students { get; private set; }
+        public List<Student> students { get; private set; }
+        public List<Initiator> initiators { get; private set; }
+
         public int projectID { get; private set; }
         public Distribute[] distribution { get; private set; }
-        public Project(int _capacity, List<Job> _jobs, List<AStudent> _students, int _projectID, Distribute[] _distributen)
+        public Project(int _capacity, List<Job> _jobs, List<Student> _students, int _projectID, Distribute[] _distributen, List<Initiator> _initiators)
         {
             capacity = _capacity;
             jobs = _jobs;
             students = _students;
             projectID = _projectID;
             distribution = _distributen;
+            initiators = _initiators;
         }
         public void SetStudentToStudentList(Student student)
         {
             student.SetProject(projectID);
             students.Add(student);
+        }
+        public void SetInitatorToStudentList(Initiator student)
+        {
+            initiators.Add(student);
         }
         public bool IsSpaceLeftInProject()
         {
@@ -62,9 +69,12 @@ namespace ProjektstudiumZuordnung
         {
             foreach (Student oldStudent in students)
             {
-                if (oldStudent.GetFavouriteOfCurrentProject().job == favourite.job)
+                if (oldStudent.GetFavouriteOfCurrentProject() != null)
                 {
-                    return oldStudent;
+                    if (oldStudent.GetFavouriteOfCurrentProject().job == favourite.job)
+                    {
+                        return oldStudent;
+                    }
                 }
             }
             return null;

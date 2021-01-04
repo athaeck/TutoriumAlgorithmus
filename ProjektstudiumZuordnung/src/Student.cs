@@ -14,11 +14,16 @@ namespace ProjektstudiumZuordnung
             favouriteList = _favouriteList;
             matched = _matched;
             projectID = _projectID;
-            originaleFavouriteList = _favouriteList;
         }
         public void RemoveFavourite(int i)
         {
             favouriteList.RemoveAt(i);
+            // Console.WriteLine("was machst du da L22, Student.cs");
+        }
+        public void SetOriginalFavourites()
+        {
+            List<Favourite> l = new List<Favourite>(favouriteList);
+            originaleFavouriteList = l;
         }
         public Favourite GetFavouriteOfCurrentProject()
         {
