@@ -60,9 +60,6 @@ namespace ProjektstudiumZuordnung
                     return false;
                 }
             }
-
-
-
             return false;
         }
         public Student GetOldStudent(Favourite favourite)
@@ -101,7 +98,6 @@ namespace ProjektstudiumZuordnung
             }
             return false;
         }
-
         public bool IsJobFree(Job job)
         {
             foreach (Student student in students)
@@ -116,7 +112,6 @@ namespace ProjektstudiumZuordnung
             }
             return true;
         }
-
         private Distribute GetDistribute(DegreeCourse degreeCourse)
         {
             foreach (Distribute distribute in distribution)

@@ -24,6 +24,12 @@ namespace ProjektstudiumZuordnung
             Console.WriteLine("Start Adding Student to Projects");
             AddingStudentsToProjects();
             Console.WriteLine("Added Students to Projects");
+            Console.WriteLine("Allocate remaining Students");
+            RemainingAllocation();
+            Console.WriteLine("Allocated remaining Students");
+            Console.WriteLine("Output groups");
+            ResultOfAlgorithm();
+
         }
         static void GetData()
         {
@@ -185,7 +191,8 @@ namespace ProjektstudiumZuordnung
                     Console.WriteLine("Identisch");
                     if (relatedProject.GetOldStudentStuGa(oldStudent).degreeCourse == student.degreeCourse)
                     {
-                        if (CoinFlip() > 0.5)
+                        Console.WriteLine("zahl " + CoinFlip());
+                        if (CoinFlip() > 50)
                         {
                             //Stu bekommt platz
 
@@ -268,7 +275,15 @@ namespace ProjektstudiumZuordnung
         }
         static int CoinFlip()
         {
-            return new Random().Next(0, 1);
+            return new Random().Next(101);
+        }
+        static void RemainingAllocation()
+        {
+
+        }
+        static void ResultOfAlgorithm()
+        {
+
         }
     }
 }

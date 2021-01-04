@@ -18,7 +18,6 @@ namespace ProjektstudiumZuordnung
         public void RemoveFavourite(int i)
         {
             favouriteList.RemoveAt(i);
-            // Console.WriteLine("was machst du da L22, Student.cs");
         }
         public void SetOriginalFavourites()
         {
