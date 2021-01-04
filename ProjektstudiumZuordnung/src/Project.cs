@@ -17,8 +17,9 @@ namespace ProjektstudiumZuordnung
             projectID = _projectID;
             distribution = _distributen;
         }
-        public void SetStudentToStudentList(AStudent student)
+        public void SetStudentToStudentList(Student student)
         {
+            student.SetProject(projectID);
             students.Add(student);
         }
         public bool IsSpaceLeftInProject()
@@ -29,7 +30,7 @@ namespace ProjektstudiumZuordnung
             }
             return false;
         }
-        public bool IsSpaceAtJob(Student student)
+        public bool DegreeCourseDistributeCheck(Student student)
         {
             int x = 0;
             Distribute distribute = GetDistribute(student.degreeCourse);
@@ -57,6 +58,28 @@ namespace ProjektstudiumZuordnung
 
             return false;
         }
+        public Student GetOldStudent(Favourite favourite)
+        {
+            foreach (Student oldStudent in students)
+            {
+                if (oldStudent.GetFavouriteOfCurrentProject().job == favourite.job)
+                {
+                    return oldStudent;
+                }
+            }
+            return null;
+        }
+        public Student GetOldStudentStuGa(Student currentStudent)
+        {
+            foreach (Student oldStudent in students)
+            {
+                if (oldStudent.degreeCourse == currentStudent.degreeCourse)
+                {
+                    return oldStudent;
+                }
+            }
+            return null;
+        }
         public bool IsJobValid(Job job)
         {
             foreach (Job j in jobs)
@@ -68,6 +91,22 @@ namespace ProjektstudiumZuordnung
             }
             return false;
         }
+
+        public bool IsJobFree(Job job)
+        {
+            foreach (Student student in students)
+            {
+                if (student.GetFavouriteOfCurrentProject() != null)
+                {
+                    if (student.GetFavouriteOfCurrentProject().job == job)
+                    {
+                        return false;
+                    }
+                }
+            }
+            return true;
+        }
+
         private Distribute GetDistribute(DegreeCourse degreeCourse)
         {
             foreach (Distribute distribute in distribution)
