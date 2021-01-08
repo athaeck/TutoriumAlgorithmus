@@ -48,5 +48,16 @@ namespace ProjektstudiumZuordnung
             projectID = -1;
             matched = false;
         }
+        public bool IsJobContainingFavourites(Job job)
+        {
+            foreach (Favourite favourite in favouriteList)
+            {
+                if (favourite.job == job)
+                {
+                    return true;
+                }
+            }
+            return false;
+        }
     }
 }

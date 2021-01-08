@@ -10,7 +10,7 @@ namespace ProjektstudiumZuordnung
         public static List<Initiator> initiatorList = new List<Initiator>();
         public static List<Project> projectList = new List<Project>();
         public static List<Student> studentList = new List<Student>();
-        public static List<AStudent> leftStudentList = new List<AStudent>();
+        public static List<Student> leftStudentList = new List<Student>();
 
         private static int unAssignetStudents { get; set; }
         private static string test_number = "";
@@ -151,58 +151,64 @@ namespace ProjektstudiumZuordnung
                 int _student;
                 for (_student = 0; _student < studentList.Count; _student++)
                 {
-                    Console.WriteLine("Student: " + studentList[_student].iD + " " + "is on turn");
+
+
                     int activeFavourite = 0;
                     Student student = studentList[_student];
-                    Favourite favourite;
-                    if (student.favouriteList.Count > 0)
+                    if (student.matched == false)
                     {
-                        favourite = student.favouriteList[activeFavourite];
-
-
-
-                        Project project = projectList[favourite.projectID];
-
-
-                        if (project.IsSpaceLeftInProject() == true)
+                        Console.WriteLine("Student: " + studentList[_student].iD + " " + "is on turn");
+                        Favourite favourite;
+                        if (student.favouriteList.Count > 0)
                         {
-                            if (project.IsJobFree(favourite.job))
+                            favourite = student.favouriteList[activeFavourite];
+
+
+
+                            Project project = projectList[favourite.projectID];
+
+
+                            if (project.IsSpaceLeftInProject() == true)
                             {
-                                if (project.DegreeCourseDistributeCheck(student))
+                                if (project.IsJobFree(favourite.job))
                                 {
-                                    project.SetStudentToStudentList(student);
-                                    unAssignetStudents--;
+                                    if (project.DegreeCourseDistributeCheck(student))
+                                    {
+
+                                        project.SetStudentToStudentList(student);
+                                        // studentList.RemoveAt(_student);
+                                        unAssignetStudents--;
+
+                                    }
+                                    else
+                                    {
+                                        student.RemoveFavourite(activeFavourite);
+                                    }
                                 }
                                 else
                                 {
-                                    student.RemoveFavourite(activeFavourite);
+                                    StudentVsStudent(favourite, project, student);
+
+                                    // student.RemoveFavourite(activeFavourite);
+
                                 }
                             }
                             else
                             {
                                 StudentVsStudent(favourite, project, student);
-
-                                // student.RemoveFavourite(activeFavourite);
-
                             }
                         }
                         else
                         {
-                            StudentVsStudent(favourite, project, student);
+                            SwitchStudentInUnAssigntList(student);
+                            unAssignetStudents--;
                         }
                     }
-                    else
-                    {
-                        SwitchStudentInUnAssigntList(student);
-                        unAssignetStudents--;
-                    }
-                    // SwitchStudentInUnAssigntList(studentList[_student]);
-
-                    // unAssignetStudents --;
+                    Console.WriteLine("### Zyklus durch ###");
                 }
             }
         }
-        static void SwitchStudentInUnAssigntList(AStudent student)
+        static void SwitchStudentInUnAssigntList(Student student)
         {
             leftStudentList.Add(student);
         }
@@ -271,11 +277,13 @@ namespace ProjektstudiumZuordnung
                 {
                     Console.WriteLine("Student OLD gewinnt! Kein switch!");
                     index = i;
+                    break;
                 }
                 if (currentStudentFavourites[i].projectID == relatedProject.projectID)
                 {
                     Console.WriteLine("Student NEW gewinnt! Switch!");
                     jndex = i;
+                    break;
                 }
                 i++;
             }
@@ -303,11 +311,57 @@ namespace ProjektstudiumZuordnung
         }
         static void RemainingAllocation()
         {
+            if (leftStudentList.Count > 0)
+            {
 
+                ShuffleList();
+
+                int lS = leftStudentList.Count;
+                while (lS > 0)
+                {
+                    for (int _leftStudent = 0; _leftStudent < leftStudentList.Count; _leftStudent++)
+                    {
+                        Student leftStudent = leftStudentList[_leftStudent];
+                        if (leftStudent.matched == false)
+                        {
+                            foreach (Project project in projectList)
+                            {
+                                if (project.IsSpaceLeftInProject() == true)
+                                {
+                                    Console.WriteLine(_leftStudent);
+                                    if (project.GetFreeJob(leftStudent))
+                                    {
+                                        project.SetStudentToStudentList(leftStudent);
+                                        lS--;
+                                        break;
+                                    }
+                                    else
+                                    {
+                                        project.SetStudentToStudentList(leftStudent);
+                                        lS--;
+                                        break;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
         }
         static void ResultOfAlgorithm()
         {
 
+        }
+        static void ShuffleList()
+        {
+            for (int i = projectList.Count - 1; i > 0; i--)
+            {
+                Random random = new Random();
+                int j = random.Next(i + 1);
+                Project temp = projectList[i];
+                projectList[i] = projectList[j];
+                projectList[j] = temp;
+            }
         }
     }
 }

@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+
 namespace ProjektstudiumZuordnung
 {
     class Project
@@ -22,6 +23,7 @@ namespace ProjektstudiumZuordnung
         }
         public void SetStudentToStudentList(Student student)
         {
+            Console.WriteLine("Student " + student.iD + " wurde zugeordnet");
             student.SetProject(projectID);
             students.Add(student);
         }
@@ -122,6 +124,50 @@ namespace ProjektstudiumZuordnung
                 }
             }
             return null;
+        }
+        public bool GetFreeJob(Student student)
+        {
+            List<Job> listedJobs = new List<Job>();
+            List<Job> currentJobs = new List<Job>(jobs);
+            List<int> indizies = new List<int>();
+            foreach (Student placedStudent in students)
+            {
+                if (placedStudent.GetFavouriteOfCurrentProject() != null)
+                {
+                    Job placedStudentJob = placedStudent.GetFavouriteOfCurrentProject().job;
+                    listedJobs.Add(placedStudentJob);
+                }
+            }
+            int j = 0;
+            foreach (Job _job in currentJobs.ToArray())
+            {
+                foreach (Job _listedJob in listedJobs)
+                {
+                    if (_job == _listedJob)
+                    {
+                        indizies.Add(j);
+                    }
+
+                }
+                j++;
+            }
+            indizies.Sort();
+            for (int i = indizies.Count - 1; i >= 0; i--)
+            {
+                currentJobs.RemoveAt(indizies[i]);
+            }
+            bool b = false;
+            if (currentJobs.Count > 0)
+            {
+                foreach (Job _currentJob in currentJobs)
+                {
+                    if (student.IsJobContainingFavourites(_currentJob))
+                    {
+                        b = true;
+                    }
+                }
+            }
+            return b;
         }
     }
 }
