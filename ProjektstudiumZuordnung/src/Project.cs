@@ -139,7 +139,7 @@ namespace ProjektstudiumZuordnung
                 }
             }
             int j = 0;
-            foreach (Job _job in currentJobs.ToArray())
+            foreach (Job _job in currentJobs)
             {
                 foreach (Job _listedJob in listedJobs)
                 {
