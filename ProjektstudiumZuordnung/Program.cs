@@ -110,10 +110,14 @@ namespace ProjektstudiumZuordnung
             switch (test_number)
             {
                 case "two":
-                    Console.WriteLine("TBD");
+                    projectList.Add(new Project(4, new List<Job>() { Job.PROJEKTMANAGEMENT, Job.ORGANISATION, Job.PRODUKTION, Job.KONZEPTION }, new List<Student>(), 0, new Distribute[3] { new Distribute(DegreeCourse.MIB, 1), new Distribute(DegreeCourse.OMB, 1), new Distribute(DegreeCourse.MKB, 1) }, new List<Initiator>()));
+                    projectList.Add(new Project(3, new List<Job>() { Job.PROJEKTMANAGEMENT, Job.ORGANISATION, Job.KONZEPTION }, new List<Student>(), 0, new Distribute[3] { new Distribute(DegreeCourse.MIB, 1), new Distribute(DegreeCourse.OMB, 1), new Distribute(DegreeCourse.MKB, 1) }, new List<Initiator>()));
+                    projectList.Add(new Project(4, new List<Job>() { Job.PROJEKTMANAGEMENT, Job.ORGANISATION, Job.PRODUKTION, Job.KONZEPTION }, new List<Student>(), 0, new Distribute[3] { new Distribute(DegreeCourse.MIB, 1), new Distribute(DegreeCourse.OMB, 1), new Distribute(DegreeCourse.MKB, 1) }, new List<Initiator>()));
                     break;
                 case "three":
-                    Console.WriteLine("TBD");
+                    projectList.Add(new Project(3, new List<Job>() { Job.PROJEKTMANAGEMENT, Job.ORGANISATION, Job.KONZEPTION }, new List<Student>(), 0, new Distribute[3] { new Distribute(DegreeCourse.MIB, 1), new Distribute(DegreeCourse.OMB, 1), new Distribute(DegreeCourse.MKB, 1) }, new List<Initiator>()));
+                    projectList.Add(new Project(3, new List<Job>() { Job.PROJEKTMANAGEMENT, Job.ORGANISATION, Job.KONZEPTION }, new List<Student>(), 0, new Distribute[3] { new Distribute(DegreeCourse.MIB, 1), new Distribute(DegreeCourse.OMB, 1), new Distribute(DegreeCourse.MKB, 1) }, new List<Initiator>()));
+                    projectList.Add(new Project(4, new List<Job>() { Job.PROJEKTMANAGEMENT, Job.ORGANISATION, Job.PRODUKTION, Job.KONZEPTION }, new List<Student>(), 0, new Distribute[3] { new Distribute(DegreeCourse.MIB, 1), new Distribute(DegreeCourse.OMB, 1), new Distribute(DegreeCourse.MKB, 1) }, new List<Initiator>()));
                     break;
                 default:
                     projectList.Add(new Project(4, new List<Job>() { Job.PROJEKTMANAGEMENT, Job.ORGANISATION, Job.PRODUKTION, Job.KONZEPTION }, new List<Student>(), 0, new Distribute[3] { new Distribute(DegreeCourse.MIB, 1), new Distribute(DegreeCourse.OMB, 1), new Distribute(DegreeCourse.MKB, 1) }, new List<Initiator>()));
