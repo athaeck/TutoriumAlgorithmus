@@ -43,3 +43,18 @@ C:\Users\Nick Häcker\Projekte\TutoriumAlgorithmus\ProjektstudiumZuordnung\obj\D
 C:\Users\Nick Häcker\Projekte\TutoriumAlgorithmus\ProjektstudiumZuordnung\obj\Debug\netcoreapp3.1\ProjektstudiumZuordnung.dll
 C:\Users\Nick Häcker\Projekte\TutoriumAlgorithmus\ProjektstudiumZuordnung\obj\Debug\netcoreapp3.1\ProjektstudiumZuordnung.pdb
 C:\Users\Nick Häcker\Projekte\TutoriumAlgorithmus\ProjektstudiumZuordnung\obj\Debug\netcoreapp3.1\ProjektstudiumZuordnung.genruntimeconfig.cache
+C:\Users\marcf\OneDrive\Desktop\Studium\Sem. 4\Tutorium FDP2\ProjektAlgo\TutoriumAlgorithmus\ProjektstudiumZuordnung\obj\Debug\netcoreapp3.1\ProjektstudiumZuordnung.csprojAssemblyReference.cache
+C:\Users\marcf\OneDrive\Desktop\Studium\Sem. 4\Tutorium FDP2\ProjektAlgo\TutoriumAlgorithmus\ProjektstudiumZuordnung\obj\Debug\netcoreapp3.1\ProjektstudiumZuordnung.AssemblyInfoInputs.cache
+C:\Users\marcf\OneDrive\Desktop\Studium\Sem. 4\Tutorium FDP2\ProjektAlgo\TutoriumAlgorithmus\ProjektstudiumZuordnung\obj\Debug\netcoreapp3.1\ProjektstudiumZuordnung.AssemblyInfo.cs
+C:\Users\marcf\OneDrive\Desktop\Studium\Sem. 4\Tutorium FDP2\ProjektAlgo\TutoriumAlgorithmus\ProjektstudiumZuordnung\obj\Debug\netcoreapp3.1\ProjektstudiumZuordnung.csproj.CoreCompileInputs.cache
+C:\Users\marcf\OneDrive\Desktop\Studium\Sem. 4\Tutorium FDP2\ProjektAlgo\TutoriumAlgorithmus\ProjektstudiumZuordnung\obj\Debug\netcoreapp3.1\ProjektstudiumZuordnung.dll
+C:\Users\marcf\OneDrive\Desktop\Studium\Sem. 4\Tutorium FDP2\ProjektAlgo\TutoriumAlgorithmus\ProjektstudiumZuordnung\obj\Debug\netcoreapp3.1\ProjektstudiumZuordnung.pdb
+C:\Users\marcf\OneDrive\Desktop\Studium\Sem. 4\Tutorium FDP2\ProjektAlgo\TutoriumAlgorithmus\ProjektstudiumZuordnung\bin\Debug\netcoreapp3.1\ProjektstudiumZuordnung.exe
+C:\Users\marcf\OneDrive\Desktop\Studium\Sem. 4\Tutorium FDP2\ProjektAlgo\TutoriumAlgorithmus\ProjektstudiumZuordnung\bin\Debug\netcoreapp3.1\ProjektstudiumZuordnung.deps.json
+C:\Users\marcf\OneDrive\Desktop\Studium\Sem. 4\Tutorium FDP2\ProjektAlgo\TutoriumAlgorithmus\ProjektstudiumZuordnung\bin\Debug\netcoreapp3.1\ProjektstudiumZuordnung.runtimeconfig.json
+C:\Users\marcf\OneDrive\Desktop\Studium\Sem. 4\Tutorium FDP2\ProjektAlgo\TutoriumAlgorithmus\ProjektstudiumZuordnung\bin\Debug\netcoreapp3.1\ProjektstudiumZuordnung.runtimeconfig.dev.json
+C:\Users\marcf\OneDrive\Desktop\Studium\Sem. 4\Tutorium FDP2\ProjektAlgo\TutoriumAlgorithmus\ProjektstudiumZuordnung\bin\Debug\netcoreapp3.1\ProjektstudiumZuordnung.dll
+C:\Users\marcf\OneDrive\Desktop\Studium\Sem. 4\Tutorium FDP2\ProjektAlgo\TutoriumAlgorithmus\ProjektstudiumZuordnung\bin\Debug\netcoreapp3.1\ProjektstudiumZuordnung.pdb
+C:\Users\marcf\OneDrive\Desktop\Studium\Sem. 4\Tutorium FDP2\ProjektAlgo\TutoriumAlgorithmus\ProjektstudiumZuordnung\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll
+C:\Users\marcf\OneDrive\Desktop\Studium\Sem. 4\Tutorium FDP2\ProjektAlgo\TutoriumAlgorithmus\ProjektstudiumZuordnung\obj\Debug\netcoreapp3.1\ProjektstudiumZuordnung.csproj.CopyComplete
+C:\Users\marcf\OneDrive\Desktop\Studium\Sem. 4\Tutorium FDP2\ProjektAlgo\TutoriumAlgorithmus\ProjektstudiumZuordnung\obj\Debug\netcoreapp3.1\ProjektstudiumZuordnung.genruntimeconfig.cache

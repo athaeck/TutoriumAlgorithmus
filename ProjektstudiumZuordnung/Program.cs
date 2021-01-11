@@ -354,6 +354,67 @@ namespace ProjektstudiumZuordnung
         }
         static void ResultOfAlgorithm()
         {
+            foreach(Project project in projectList) {
+                Console.Write("Projekt "+ project.projectID + ": (needs: " + project.capacity + " | has: " + project.students.Count + ") ");
+                
+                if(project.capacity == project.students.Count) {
+                    Console.WriteLine("*** CHECK *** ");
+                }
+                else {
+                    Console.WriteLine("*** FAIL ***");
+                }
+
+                Console.Write("---- Needs Jobs: " );
+                foreach (Job job in project.jobs)
+                    {
+                        Console.Write(job +  " ");
+                    }
+                    Console.WriteLine("");
+
+                Console.Write("---- Needs DegreeCourse: " );
+                foreach (Distribute degree in project.distribution)
+                    {
+                        Console.Write(degree.degreeCourse +  "(" + degree.count + ") ");
+                    }
+                    Console.WriteLine("");
+
+                Console.Write("-- Initiatiors: " );
+
+                if(project.initiators.Count > 0) {
+                    foreach (Initiator initiator in project.initiators)
+                    {
+                        Console.Write(initiator.iD +  " (" + initiator.degreeCourse + ")");
+                    }
+                    Console.WriteLine("");
+                }
+                else {
+                    Console.WriteLine("n/A ");
+                }
+
+                Console.Write("-- Students: " );
+                if(project.students.Count > 0) {
+                    foreach (Student student in project.students)
+                    {
+                        Console.Write(student.iD  + " ("+ student.degreeCourse +" "+ student.GetFavouriteOfCurrentProject().job + ") ");
+                    }
+                    Console.WriteLine("");
+                }
+                else {
+                    Console.WriteLine("n/A ");
+                }
+
+            }
+            Console.Write("LeftStudents: ");
+            if(leftStudentList.Count > 0) {
+                    foreach (Student leftStudent in leftStudentList)
+                    {
+                        Console.Write(leftStudent.iD  + " ");
+                    }
+                    Console.WriteLine("");
+                }
+                else {
+                    Console.WriteLine("n/A ");
+                }
 
         }
         static void ShuffleList()
