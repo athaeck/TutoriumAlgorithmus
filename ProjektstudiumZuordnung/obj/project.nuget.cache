@@ -1,10 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "WxBWXZ+FXuWAsRjBljsBcWGLVpRxG164SiHUiB7YXUn2g2QP6AfN1WvWaqP3HAYANt3mBpaV5rA2uofzAUSFVQ==",
+  "dgSpecHash": "sEOGdUlKImTe+yjbrFF0lf9EKVwAoOqs9D+tmgjCgbQW5a89z1Q7E/iNwAcqoaTuXgepTdTOf8ruY3ZaLy/f9w==",
   "success": true,
-  "projectFilePath": "C:\\Users\\marcf\\OneDrive\\Desktop\\Studium\\Sem. 4\\Tutorium FDP2\\ProjektAlgo\\TutoriumAlgorithmus\\ProjektstudiumZuordnung\\ProjektstudiumZuordnung.csproj",
+  "projectFilePath": "C:\\Users\\Nick\\OneDrive\\HFU\\Mathe Tutorium\\TutoriumAlgorithmus\\ProjektstudiumZuordnung\\ProjektstudiumZuordnung.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\marcf\\.nuget\\packages\\newtonsoft.json\\12.0.3\\newtonsoft.json.12.0.3.nupkg.sha512"
+    "C:\\Users\\Nick\\.nuget\\packages\\newtonsoft.json\\12.0.3\\newtonsoft.json.12.0.3.nupkg.sha512"
   ],
   "logs": []
 }

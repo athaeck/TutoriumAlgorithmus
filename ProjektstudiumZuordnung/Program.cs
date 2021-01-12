@@ -206,6 +206,7 @@ namespace ProjektstudiumZuordnung
                         {
                             SwitchStudentInUnAssigntList(student);
                             unAssignetStudents--;
+                            Console.WriteLine("switch");
                         }
                     }
                     Console.WriteLine("### Zyklus durch ###");
@@ -214,7 +215,16 @@ namespace ProjektstudiumZuordnung
         }
         static void SwitchStudentInUnAssigntList(Student student)
         {
+            bool b = false;
+            foreach (Student added in leftStudentList)
+            {
+                if(added.iD == student.iD){
+                    b = true;
+                }
+            }
+            if(b == false){
             leftStudentList.Add(student);
+            }
         }
         static void StudentVsStudent(Favourite currentStudentFavourite, Project relatedProject, Student student)
         {
