@@ -242,8 +242,18 @@ namespace ProjektstudiumZuordnung
                         {
                             //Stu bekommt platz
 
-                            student.SetProject(oldStudent.projectID);
-                            oldStudent.UnmatchProject();
+                            // student.SetProject(oldStudent.projectID);
+                            Project _project = null;
+                            foreach (Project p in projectList)
+                            {
+                                if (p.projectID == oldStudent.projectID)
+                                {
+                                    _project = p;
+                                }
+                            }
+
+                            _project.SetStudentToStudentList(student);
+                            _project.Unmatch(oldStudent);
 
                         }
                         else

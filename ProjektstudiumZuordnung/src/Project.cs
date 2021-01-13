@@ -27,6 +27,19 @@ namespace ProjektstudiumZuordnung
             student.SetProject(projectID);
             students.Add(student);
         }
+        public void Unmatch(Student student)
+        {
+            int i = 0;
+            foreach (Student s in students)
+            {
+                if (s.iD == student.iD)
+                {
+                    students.RemoveAt(i);
+                }
+                i++;
+            }
+            student.UnmatchProject();
+        }
         public void SetInitatorToStudentList(Initiator student)
         {
             initiators.Add(student);
