@@ -161,7 +161,7 @@ namespace ProjektstudiumZuordnung
                     Student student = studentList[_student];
                     if (student.matched == false)
                     {
-                        Console.WriteLine("Student: " + studentList[_student].iD + " " + "is on turn");
+                        Console.WriteLine("Student: " + studentList[_student].iD  + " " + "is on turn");
                         Favourite favourite;
                         if (student.favouriteList.Count > 0)
                         {
@@ -290,6 +290,7 @@ namespace ProjektstudiumZuordnung
         static int StudentVsStudentCaseFinder(Favourite currentStudentFavourite, Project relatedProject, Student student, Student oldStudent)
         {
             // Student oldStudent = relatedProject.GetOldStudent(currentStudentFavourite);
+            
             List<Favourite> oldStudentFavourites = oldStudent.originaleFavouriteList;
             List<Favourite> currentStudentFavourites = student.originaleFavouriteList;
 
