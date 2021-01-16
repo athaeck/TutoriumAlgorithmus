@@ -13,7 +13,7 @@ namespace ProjektstudiumZuordnung
         public static List<Student> leftStudentList = new List<Student>();
 
         private static int unAssignetStudents { get; set; }
-        private static int test_number = 0;
+        private static int test_number = 3;
         static void Main(string[] args)
         {
             Console.WriteLine("Begin Initiation");
