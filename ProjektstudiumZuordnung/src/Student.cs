@@ -24,11 +24,26 @@ namespace ProjektstudiumZuordnung
             List<Favourite> l = new List<Favourite>(favouriteList);
             originaleFavouriteList = l;
         }
+        public int GetIndexOfFavourite(Favourite favourite)
+        {
+            int i = 0;
+
+            foreach (Favourite f in favouriteList)
+            {
+                if (f.projectID == favourite.projectID)
+                {
+                    return i;
+                }
+                i++;
+            }
+
+            return 0;
+        }
         public Favourite GetFavouriteOfCurrentProject()
         {
             if (matched)
             {
-                foreach (Favourite favourite in originaleFavouriteList)
+                foreach (Favourite favourite in favouriteList)
                 {
                     if (favourite.projectID == projectID)
                     {
