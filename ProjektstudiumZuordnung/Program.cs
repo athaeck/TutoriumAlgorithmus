@@ -13,7 +13,7 @@ namespace ProjektstudiumZuordnung
         public static List<Student> leftStudentList = new List<Student>();
 
         private static int unAssignetStudents { get; set; }
-        private static int test_number = 3;
+        private static int test_number = 0;
         static void Main(string[] args)
         {
             Console.WriteLine("Begin Initiation");
@@ -454,6 +454,7 @@ namespace ProjektstudiumZuordnung
             {
                 Console.WriteLine("n/A ");
             }
+            HappioMeter();
 
         }
         static void ShuffleList()
@@ -466,6 +467,27 @@ namespace ProjektstudiumZuordnung
                 projectList[i] = projectList[j];
                 projectList[j] = temp;
             }
+        }
+        static void HappioMeter()
+        {
+            List<double> Grade = new List<double>();
+            double avg = 0;
+            double sum = 0;
+            foreach (Project project in projectList)
+            {
+                foreach (Student student in project.students)
+                {
+                    double marc = student.GetHappiness();
+                    Console.WriteLine("Note: " + marc);
+                    Grade.Add(marc);
+                }
+            }
+            foreach (double d in Grade)
+            {
+                sum += d;
+            }
+            avg = sum / Grade.Count;
+            Console.WriteLine("Durchschnittliche Zufreidenheit: " + avg);
         }
     }
 }

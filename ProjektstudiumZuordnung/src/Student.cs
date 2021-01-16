@@ -53,6 +53,68 @@ namespace ProjektstudiumZuordnung
             }
             return null;
         }
+        public double GetHappiness()
+        {
+            int i = 0;
+            int index = 0;
+            bool forcedAssigned = true;
+            Favourite f = null;
+            if (favouriteList.Count > 0)
+            {
+                foreach (Favourite favourite in favouriteList)
+                {
+                    if (favourite.projectID == projectID)
+                    {
+                        f = favourite;
+                    }
+                }
+            }
+            if (f != null)
+            {
+                foreach (Favourite favourite in originaleFavouriteList)
+                {
+                    if (favourite.projectID == f.projectID && favourite.job == f.job)
+                    {
+                        index = i;
+                        forcedAssigned = false;
+                    }
+                    i++;
+                }
+            }
+            else
+            {
+                foreach (Favourite favourite in originaleFavouriteList)
+                {
+                    if (favourite.projectID == projectID)
+                    {
+                        index = i;
+                    }
+                    i++;
+                }
+            }
+            if (forcedAssigned == true)
+            {
+                index = originaleFavouriteList.Count;
+            }
+            double returnGrade = 6;
+            switch (index)
+            {
+                case 0:
+                    returnGrade = 1;
+                    break;
+                case 1:
+                    returnGrade = 2.25;
+                    break;
+                case 2:
+                    returnGrade = 4;
+                    break;
+                case 3:
+                    returnGrade = 6;
+                    break;
+            }
+            return returnGrade;
+
+        }
         public void SetProject(int _projectID)
         {
             projectID = _projectID;
