@@ -478,7 +478,6 @@ namespace ProjektstudiumZuordnung
                 foreach (Student student in project.students)
                 {
                     double marc = student.GetHappiness();
-                    Console.WriteLine("Note: " + marc);
                     Grade.Add(marc);
                 }
             }
