@@ -296,7 +296,7 @@ namespace ProjektstudiumZuordnung
                     }
                     break;
                 default:
-                    Console.WriteLine("steffen 30 cm");
+                    Console.WriteLine("----Null----");
                     break;
             }
         }
