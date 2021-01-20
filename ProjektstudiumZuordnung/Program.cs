@@ -442,8 +442,12 @@ namespace ProjektstudiumZuordnung
         static void HappioMeter()
         {
             List<double> Grade = new List<double>();
+            List<double> GradeProj = new List<double>();
             double avg = 0;
             double sum = 0;
+
+            double avgProj = 0;
+            double sumProj = 0;
             Console.WriteLine("Durchschnittliche Zufriedenheit:");
             foreach (Project project in projectList)
             {
@@ -462,6 +466,7 @@ namespace ProjektstudiumZuordnung
                     sum1 += d;
                 }
                 avg1 = sum1 / Grade1.Count;
+                GradeProj.Add(avg1);
                 Console.WriteLine("-- Prj. " + project.projectID + ": " + avg1);
 
             }
@@ -471,7 +476,15 @@ namespace ProjektstudiumZuordnung
                 sum += d;
             }
             avg = sum / Grade.Count;
-            Console.WriteLine("---- INSG.: " + avg);
+
+            foreach (double d in GradeProj)
+            {
+                sumProj += d;
+            }
+            avgProj = sumProj / GradeProj.Count;
+
+            Console.WriteLine("---- INSG Studenten.: " + avg);
+            Console.WriteLine("---- INSG Projekte.: " + avgProj);
         }
     }
 }
