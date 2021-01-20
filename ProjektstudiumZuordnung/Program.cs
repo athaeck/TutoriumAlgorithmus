@@ -473,20 +473,34 @@ namespace ProjektstudiumZuordnung
             List<double> Grade = new List<double>();
             double avg = 0;
             double sum = 0;
+            Console.WriteLine("Durchschnittliche Zufriedenheit:");
             foreach (Project project in projectList)
             {
+                List<double> Grade1 = new List<double>();
+                double sum1 = 0;
+                double avg1 = 0;
                 foreach (Student student in project.students)
                 {
                     double marc = student.GetHappiness();
                     Grade.Add(marc);
+                    Grade1.Add(marc);
                 }
+
+                foreach (double d in Grade1)
+                {
+                    sum1 += d;
+                }
+                avg1 = sum1 / Grade1.Count;
+                Console.WriteLine("-- Prj. " + project.projectID + ": " + avg1);
+
             }
+
             foreach (double d in Grade)
             {
                 sum += d;
             }
             avg = sum / Grade.Count;
-            Console.WriteLine("Durchschnittliche Zufreidenheit: " + avg);
+            Console.WriteLine("---- INSG.: " + avg);
         }
     }
 }
