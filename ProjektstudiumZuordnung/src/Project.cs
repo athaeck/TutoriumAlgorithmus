@@ -31,17 +31,15 @@ namespace ProjektstudiumZuordnung
         {
 
             Console.WriteLine("Student unmatch " + student.iD + "");
-            for (int i = students.Count-1; i >=0; i--)
+            for (int i = students.Count - 1; i >= 0; i--)
             {
                 if (students[i].iD == student.iD)
                 {
                     students[i].RemoveFavourite(students[i].GetIndexOfFavourite(students[i].GetFavouriteOfCurrentProject()));
                     students.RemoveAt(i);
                 }
-
-
             }
-             student.UnmatchProject();
+            student.UnmatchProject();
         }
         public void SetInitatorToStudentList(Initiator student)
         {
@@ -163,7 +161,6 @@ namespace ProjektstudiumZuordnung
                     {
                         indizies.Add(j);
                     }
-
                 }
                 j++;
             }

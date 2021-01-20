@@ -13,7 +13,7 @@ namespace ProjektstudiumZuordnung
         public static List<Student> leftStudentList = new List<Student>();
 
         private static int unAssignetStudents { get; set; }
-        private static int test_number = 3;
+        private static int test_number = 0;
         static void Main(string[] args)
         {
             Console.WriteLine("Begin Initiation");
@@ -29,7 +29,6 @@ namespace ProjektstudiumZuordnung
             Console.WriteLine("Allocated remaining Students");
             Console.WriteLine("Output groups");
             ResultOfAlgorithm();
-
         }
         static void GetData()
         {
@@ -75,17 +74,18 @@ namespace ProjektstudiumZuordnung
                     studentList.Add(new Student(new List<Favourite>() { new Favourite(1, Job.ORGANISATION), new Favourite(1, Job.PROJEKTMANAGEMENT), new Favourite(2, Job.ORGANISATION) }, DegreeCourse.OMB, 11, false, -1));
                     break;
                 default:
-                    studentList.Add(new Student(new List<Favourite>() { new Favourite(0, Job.ORGANISATION), new Favourite(1, Job.PRODUKTION), new Favourite(0, Job.KONZEPTION) }, DegreeCourse.OMB, 0, false, -1));
+
                     studentList.Add(new Student(new List<Favourite>() { new Favourite(1, Job.ORGANISATION), new Favourite(0, Job.ORGANISATION), new Favourite(2, Job.PRODUKTION) }, DegreeCourse.OMB, 1, false, -1));
-                    studentList.Add(new Student(new List<Favourite>() { new Favourite(0, Job.PRODUKTION), new Favourite(2, Job.PROJEKTMANAGEMENT), new Favourite(1, Job.ORGANISATION) }, DegreeCourse.MIB, 2, false, -1));
+                    studentList.Add(new Student(new List<Favourite>() { new Favourite(0, Job.KONZEPTION), new Favourite(1, Job.ORGANISATION), new Favourite(1, Job.KONZEPTION) }, DegreeCourse.MKB, 11, false, -1));
                     studentList.Add(new Student(new List<Favourite>() { new Favourite(2, Job.KONZEPTION), new Favourite(0, Job.PROJEKTMANAGEMENT), new Favourite(1, Job.PROJEKTMANAGEMENT) }, DegreeCourse.MKB, 3, false, -1));
-                    studentList.Add(new Student(new List<Favourite>() { new Favourite(0, Job.KONZEPTION), new Favourite(2, Job.PROJEKTMANAGEMENT), new Favourite(2, Job.PRODUKTION) }, DegreeCourse.MIB, 5, false, -1));
-                    studentList.Add(new Student(new List<Favourite>() { new Favourite(2, Job.PRODUKTION), new Favourite(0, Job.PROJEKTMANAGEMENT), new Favourite(0, Job.KONZEPTION) }, DegreeCourse.OMB, 6, false, -1));
-                    studentList.Add(new Student(new List<Favourite>() { new Favourite(2, Job.ORGANISATION), new Favourite(0, Job.ORGANISATION), new Favourite(1, Job.ORGANISATION) }, DegreeCourse.MIB, 7, false, -1));
+                    studentList.Add(new Student(new List<Favourite>() { new Favourite(0, Job.PRODUKTION), new Favourite(2, Job.PROJEKTMANAGEMENT), new Favourite(1, Job.ORGANISATION) }, DegreeCourse.MIB, 2, false, -1));
                     studentList.Add(new Student(new List<Favourite>() { new Favourite(0, Job.PROJEKTMANAGEMENT), new Favourite(1, Job.ORGANISATION), new Favourite(2, Job.ORGANISATION) }, DegreeCourse.MIB, 8, false, -1));
                     studentList.Add(new Student(new List<Favourite>() { new Favourite(1, Job.KONZEPTION), new Favourite(2, Job.PROJEKTMANAGEMENT), new Favourite(0, Job.PROJEKTMANAGEMENT) }, DegreeCourse.OMB, 9, false, -1));
                     studentList.Add(new Student(new List<Favourite>() { new Favourite(1, Job.ORGANISATION), new Favourite(0, Job.ORGANISATION), new Favourite(2, Job.PROJEKTMANAGEMENT) }, DegreeCourse.MKB, 10, false, -1));
-                    studentList.Add(new Student(new List<Favourite>() { new Favourite(0, Job.KONZEPTION), new Favourite(1, Job.ORGANISATION), new Favourite(1, Job.KONZEPTION) }, DegreeCourse.MKB, 11, false, -1));
+                    studentList.Add(new Student(new List<Favourite>() { new Favourite(0, Job.ORGANISATION), new Favourite(1, Job.PRODUKTION), new Favourite(0, Job.KONZEPTION) }, DegreeCourse.OMB, 0, false, -1));
+                    studentList.Add(new Student(new List<Favourite>() { new Favourite(0, Job.KONZEPTION), new Favourite(2, Job.PROJEKTMANAGEMENT), new Favourite(2, Job.PRODUKTION) }, DegreeCourse.MIB, 5, false, -1));
+                    studentList.Add(new Student(new List<Favourite>() { new Favourite(2, Job.PRODUKTION), new Favourite(0, Job.PROJEKTMANAGEMENT), new Favourite(0, Job.KONZEPTION) }, DegreeCourse.OMB, 6, false, -1));
+                    studentList.Add(new Student(new List<Favourite>() { new Favourite(2, Job.ORGANISATION), new Favourite(0, Job.ORGANISATION), new Favourite(1, Job.ORGANISATION) }, DegreeCourse.MIB, 7, false, -1));
                     break;
             }
         }
@@ -166,20 +166,14 @@ namespace ProjektstudiumZuordnung
                         if (student.favouriteList.Count > 0)
                         {
                             favourite = student.favouriteList[activeFavourite];
-
-
                             Project project = GetProject(favourite.projectID);
-
-
                             if (project.IsSpaceLeftInProject() == true)
                             {
                                 if (project.IsJobFree(favourite.job))
                                 {
                                     if (project.DegreeCourseDistributeCheck(student))
                                     {
-
                                         project.SetStudentToStudentList(student);
-                                        // studentList.RemoveAt(_student);
                                         unAssignetStudents--;
 
                                     }
@@ -191,9 +185,6 @@ namespace ProjektstudiumZuordnung
                                 else
                                 {
                                     StudentVsStudent(favourite, project, student);
-
-                                    // student.RemoveFavourite(activeFavourite);
-
                                 }
                             }
                             else
@@ -250,9 +241,6 @@ namespace ProjektstudiumZuordnung
                         Console.WriteLine("zahl " + CoinFlip());
                         if (CoinFlip() > 50)
                         {
-                            //Stu bekommt platz
-
-                            // student.SetProject(oldStudent.projectID);
                             Project _project = null;
                             foreach (Project p in projectList)
                             {
@@ -261,22 +249,17 @@ namespace ProjektstudiumZuordnung
                                     _project = p;
                                 }
                             }
-
                             _project.SetStudentToStudentList(student);
                             _project.Unmatch(oldStudent);
-
                         }
                         else
                         {
                             student.RemoveFavourite(0);
-                            //Stu bekommt platz nicht
                         }
                     }
                     else
                     {
-                        //Stu bekommt platz nicht
                         student.RemoveFavourite(0);
-
                     }
                     break;
                 case 2:
@@ -302,11 +285,8 @@ namespace ProjektstudiumZuordnung
         }
         static int StudentVsStudentCaseFinder(Favourite currentStudentFavourite, Project relatedProject, Student student, Student oldStudent)
         {
-            // Student oldStudent = relatedProject.GetOldStudent(currentStudentFavourite);
-
             List<Favourite> oldStudentFavourites = oldStudent.originaleFavouriteList;
             List<Favourite> currentStudentFavourites = student.originaleFavouriteList;
-
             int i = 0;
             foreach (Favourite favourite in oldStudentFavourites)
             {
@@ -325,23 +305,19 @@ namespace ProjektstudiumZuordnung
                     Console.WriteLine("Student NEW gewinnt! Switch!");
                     return 3;
                 }
-
                 i++;
             }
             return 4;
         }
         static int CoinFlip()
         {
-            // return 49;
             return new Random().Next(101);
         }
         static void RemainingAllocation()
         {
             if (leftStudentList.Count > 0)
             {
-
                 ShuffleList();
-
                 int lS = leftStudentList.Count;
                 while (lS > 0)
                 {
@@ -386,10 +362,7 @@ namespace ProjektstudiumZuordnung
                 }
                 else
                 {
-
                     Console.WriteLine("*** FAIL ***");
-
-
                 }
 
                 Console.Write("---- Needs Jobs: ");
@@ -418,7 +391,7 @@ namespace ProjektstudiumZuordnung
                 }
                 else
                 {
-                    Console.WriteLine("n/a ");
+                    Console.WriteLine("n/A ");
                 }
 
                 Console.Write("-- Students: ");
@@ -426,7 +399,7 @@ namespace ProjektstudiumZuordnung
                 {
                     foreach (Student student in project.students)
                     {
-                        string job = "n/a";
+                        string job = "n/A";
                         if (student.GetFavouriteOfCurrentProject() != null)
                         {
                             job = student.GetFavouriteOfCurrentProject().job.ToString();
