@@ -128,6 +128,7 @@ namespace ProjektstudiumZuordnung
             }
             return true;
         }
+        // private bool Is
         private Distribute GetDistribute(DegreeCourse degreeCourse)
         {
             foreach (Distribute distribute in distribution)

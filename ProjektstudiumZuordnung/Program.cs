@@ -11,7 +11,7 @@ namespace ProjektstudiumZuordnung
         public static List<Student> leftStudentList = new List<Student>();
 
         private static int unAssignetStudents { get; set; }
-        private static int test_number = 0;
+        private static int test_number = 2;
         static void Main(string[] args)
         {
             Console.WriteLine("Begin Initiation");
@@ -43,19 +43,19 @@ namespace ProjektstudiumZuordnung
             switch (test_number)
             {
                 case 2:
-                    studentList.Add(new Student(new List<Favourite>() { new Favourite(0, Job.ORGANISATION), new Favourite(1, Job.ORGANISATION), new Favourite(2, Job.PRODUKTION) }, DegreeCourse.OMB, 0, false, -1));
-
-                    studentList.Add(new Student(new List<Favourite>() { new Favourite(2, Job.KONZEPTION), new Favourite(0, Job.KONZEPTION), new Favourite(1, Job.PRODUKTION) }, DegreeCourse.MIB, 2, false, -1));
-                    studentList.Add(new Student(new List<Favourite>() { new Favourite(0, Job.PROJEKTMANAGEMENT), new Favourite(0, Job.ORGANISATION), new Favourite(1, Job.ORGANISATION) }, DegreeCourse.OMB, 3, false, -1));
-                    studentList.Add(new Student(new List<Favourite>() { new Favourite(1, Job.PROJEKTMANAGEMENT), new Favourite(2, Job.KONZEPTION), new Favourite(0, Job.PRODUKTION) }, DegreeCourse.MKB, 4, false, -1));
-                    studentList.Add(new Student(new List<Favourite>() { new Favourite(0, Job.ORGANISATION), new Favourite(0, Job.PRODUKTION), new Favourite(2, Job.PROJEKTMANAGEMENT) }, DegreeCourse.OMB, 5, false, -1));
-                    studentList.Add(new Student(new List<Favourite>() { new Favourite(2, Job.PROJEKTMANAGEMENT), new Favourite(1, Job.PROJEKTMANAGEMENT), new Favourite(0, Job.KONZEPTION) }, DegreeCourse.MIB, 6, false, -1));
-                    studentList.Add(new Student(new List<Favourite>() { new Favourite(2, Job.KONZEPTION), new Favourite(2, Job.ORGANISATION), new Favourite(0, Job.KONZEPTION) }, DegreeCourse.MKB, 7, false, -1));
-                    studentList.Add(new Student(new List<Favourite>() { new Favourite(0, Job.KONZEPTION), new Favourite(1, Job.ORGANISATION), new Favourite(0, Job.PRODUKTION) }, DegreeCourse.MKB, 8, false, -1));
                     studentList.Add(new Student(new List<Favourite>() { new Favourite(1, Job.KONZEPTION), new Favourite(0, Job.PROJEKTMANAGEMENT), new Favourite(2, Job.KONZEPTION) }, DegreeCourse.OMB, 9, false, -1));
-                    studentList.Add(new Student(new List<Favourite>() { new Favourite(1, Job.ORGANISATION), new Favourite(1, Job.KONZEPTION), new Favourite(1, Job.PROJEKTMANAGEMENT) }, DegreeCourse.MIB, 10, false, -1));
-                    studentList.Add(new Student(new List<Favourite>() { new Favourite(2, Job.KONZEPTION), new Favourite(0, Job.ORGANISATION), new Favourite(0, Job.PROJEKTMANAGEMENT) }, DegreeCourse.MKB, 11, false, -1));
+                    studentList.Add(new Student(new List<Favourite>() { new Favourite(2, Job.KONZEPTION), new Favourite(2, Job.ORGANISATION), new Favourite(0, Job.KONZEPTION) }, DegreeCourse.MKB, 7, false, -1));
 
+                    studentList.Add(new Student(new List<Favourite>() { new Favourite(1, Job.ORGANISATION), new Favourite(1, Job.KONZEPTION), new Favourite(1, Job.PROJEKTMANAGEMENT) }, DegreeCourse.MIB, 10, false, -1));
+
+                    studentList.Add(new Student(new List<Favourite>() { new Favourite(2, Job.KONZEPTION), new Favourite(0, Job.ORGANISATION), new Favourite(0, Job.PROJEKTMANAGEMENT) }, DegreeCourse.MKB, 11, false, -1));
+                    studentList.Add(new Student(new List<Favourite>() { new Favourite(2, Job.PROJEKTMANAGEMENT), new Favourite(1, Job.PROJEKTMANAGEMENT), new Favourite(0, Job.KONZEPTION) }, DegreeCourse.MIB, 6, false, -1));
+                    studentList.Add(new Student(new List<Favourite>() { new Favourite(0, Job.PROJEKTMANAGEMENT), new Favourite(0, Job.ORGANISATION), new Favourite(1, Job.ORGANISATION) }, DegreeCourse.OMB, 3, false, -1));
+                    studentList.Add(new Student(new List<Favourite>() { new Favourite(2, Job.KONZEPTION), new Favourite(0, Job.KONZEPTION), new Favourite(1, Job.PROJEKTMANAGEMENT) }, DegreeCourse.MIB, 2, false, -1));
+                    studentList.Add(new Student(new List<Favourite>() { new Favourite(0, Job.ORGANISATION), new Favourite(0, Job.PRODUKTION), new Favourite(2, Job.PROJEKTMANAGEMENT) }, DegreeCourse.OMB, 5, false, -1));
+                    studentList.Add(new Student(new List<Favourite>() { new Favourite(0, Job.KONZEPTION), new Favourite(1, Job.ORGANISATION), new Favourite(0, Job.PRODUKTION) }, DegreeCourse.MKB, 8, false, -1));
+                    studentList.Add(new Student(new List<Favourite>() { new Favourite(0, Job.ORGANISATION), new Favourite(1, Job.ORGANISATION), new Favourite(2, Job.PRODUKTION) }, DegreeCourse.OMB, 0, false, -1));
+                    studentList.Add(new Student(new List<Favourite>() { new Favourite(1, Job.PROJEKTMANAGEMENT), new Favourite(2, Job.KONZEPTION), new Favourite(0, Job.PRODUKTION) }, DegreeCourse.MKB, 4, false, -1));
                     break;
                 case 3:
                     studentList.Add(new Student(new List<Favourite>() { new Favourite(1, Job.ORGANISATION), new Favourite(1, Job.ORGANISATION), new Favourite(2, Job.ORGANISATION) }, DegreeCourse.OMB, 0, false, -1));
@@ -182,6 +182,7 @@ namespace ProjektstudiumZuordnung
                                 }
                                 else
                                 {
+
                                     StudentVsStudent(favourite, project, student);
                                 }
                             }
