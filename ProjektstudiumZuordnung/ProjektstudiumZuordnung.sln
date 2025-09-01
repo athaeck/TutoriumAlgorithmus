@@ -1,0 +1,24 @@
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.2.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProjektstudiumZuordnung", "ProjektstudiumZuordnung.csproj", "{C1FD6B39-D28F-0815-BA13-D65BDD5C186C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C1FD6B39-D28F-0815-BA13-D65BDD5C186C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C1FD6B39-D28F-0815-BA13-D65BDD5C186C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C1FD6B39-D28F-0815-BA13-D65BDD5C186C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C1FD6B39-D28F-0815-BA13-D65BDD5C186C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {D8E72484-815E-4D4C-8326-6BE14108F819}
+	EndGlobalSection
+EndGlobal

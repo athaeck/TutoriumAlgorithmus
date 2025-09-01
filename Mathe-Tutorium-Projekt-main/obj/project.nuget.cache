@@ -1,8 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "N1NxoRXgFamGJFsJ635jJ51rPrBkM8w0YB6xFKad3qumbmj7aEy4c268yghv/VuhfDdp3acPxtfkPv58J09FPQ==",
+  "dgSpecHash": "BbVjkShzI+k=",
   "success": true,
-  "projectFilePath": "C:\\Users\\Nick\\OneDrive\\HFU\\Mathe Tutorium\\Projekt\\Projekt.csproj",
-  "expectedPackageFiles": [],
+  "projectFilePath": "E:\\Projekte\\HFU\\TutoriumAlgorithmus\\Mathe-Tutorium-Projekt-main\\Projekt.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\nicka\\.nuget\\packages\\microsoft.netcore.app.ref\\3.1.0\\microsoft.netcore.app.ref.3.1.0.nupkg.sha512",
+    "C:\\Users\\nicka\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\3.1.0\\microsoft.windowsdesktop.app.ref.3.1.0.nupkg.sha512",
+    "C:\\Users\\nicka\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\3.1.10\\microsoft.aspnetcore.app.ref.3.1.10.nupkg.sha512",
+    "C:\\Users\\nicka\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\3.1.32\\microsoft.netcore.app.host.win-x64.3.1.32.nupkg.sha512"
+  ],
   "logs": []
 }
